@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Thông tin Profile -->
+    <key>PayloadDisplayName</key>
+    <string>🔐 TIENIOSVN CLOUDFLARE</string>
+    
+    <key>PayloadIdentifier</key>
+    <string>com.tieniosvn.cloudflare</string>
+    
+    <key>PayloadRemovalDisallowed</key>
+    <false/>
+    
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    
+    <key>PayloadUUID</key>
+    <string>CLOUDFLARE-TIENIOSVN-1234</string>
+    
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    
+    <key>PayloadDescription</key>
+    <string>Cấu hình Cloudflare DNS bảo vệ chứng chỉ - Kết hợp từ NextDNS bcbc76 và f36ef2</string>
+    
+    <key>PayloadOrganization</key>
+    <string>Tieniosvn Cloudflare</string>
+    
+    <!-- Nội dung các Payload -->
+    <key>PayloadContent</key>
+    <array>
+        <!-- Cloudflare DNS Configuration -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.dnsSettings.managed</string>
+            
+            <key>PayloadUUID</key>
+            <string>CLOUDFLARE-DNS-1111-2222</string>
+            
+            <key>PayloadIdentifier</key>
+            <string>com.tieniosvn.dns.cloudflare</string>
+            
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            
+            <key>PayloadDisplayName</key>
+            <string>Cloudflare DNS Security</string>
+            
+            <key>PayloadDescription</key>
+            <string>Cloudflare DNS với tính năng bảo mật từ NextDNS</string>
+            
+            <key>DNSSettings</key>
+            <dict>
+                <key>DNSProtocol</key>
+                <string>HTTPS</string>
+                
+                <!-- Cloudflare DNS Servers -->
+                <key>ServerAddresses</key>
+                <array>
+                    <!-- Cloudflare Primary IPv4 -->
+                    <string>1.1.1.1</string>
+                    <string>1.0.0.1</string>
+                    <!-- Cloudflare Secondary IPv4 -->
+                    <string>1.1.1.2</string>
+                    <string>1.0.0.2</string>
+                    <!-- Cloudflare IPv6 -->
+                    <string>2606:4700:4700::1111</string>
+                    <string>2606:4700:4700::1001</string>
+                </array>
+                
+                <!-- Cloudflare DNS over HTTPS URL -->
+                <key>ServerURL</key>
+                <string>https://cloudflare-dns.com/dns-query</string>
+                
+                <!-- Cấu hình bổ sung -->
+                <key>SupplementalMatchDomains</key>
+                <array>
+                    <string>apple.com</string>
+                    <string>icloud.com</string>
+                    <string>appstore.com</string>
+                    <string>instabio.cc</string>
+                    <string>khoindvn.io.vn</string>
+                    <string>cloudflare.com</string>
+                    <string>cloudflare-dns.com</string>
+                </array>
+                
+                <!-- Thiết lập bảo mật -->
+                <key>EnableTLS</key>
+                <true/>
+                
+                <key>TLSValidationName</key>
+                <string>cloudflare-dns.com</string>
+            </dict>
+        </dict>
+        
+        <!-- WebClip 1: Tieniosvn -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.webClip.managed</string>
+            
+            <key>PayloadUUID</key>
+            <string>WEB-TIENIOSVN-3333-4444</string>
+            
+            <key>PayloadIdentifier</key>
+            <string>com.tieniosvn.webapp.main</string>
+            
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            
+            <key>PayloadDisplayName</key>
+            <string>📱 Tieniosvn App</string>
+            
+            <key>PayloadDescription</key>
+            <string>Truy cập ứng dụng Tieniosvn chính thức</string>
+            
+            <key>URL</key>
+            <string>https://instabio.cc/gtieniosvn</string>
+            
+            <key>FullScreen</key>
+            <true/>
+            
+            <key>IsRemovable</key>
+            <false/>
+            
+            <key>Label</key>
+            <string>Tieniosvn</string>
+            
+            <key>Precomposed</key>
+            <false/>
+        </dict>
+        
+        <!-- WebClip 2: Khoindvn -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.webClip.managed</string>
+            
+            <key>PayloadUUID</key>
+            <string>WEB-KHOINDVN-5555-6666</string>
+            
+            <key>PayloadIdentifier</key>
+            <string>com.tieniosvn.webapp.cert</string>
+            
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            
+            <key>PayloadDisplayName</key>
+            <string>💳 Chứng Chỉ Mua (Khoindvn)</string>
+            
+            <key>PayloadDescription</key>
+            <string>Mua chứng chỉ chính hãng tại Khoindvn</string>
+            
+            <key>URL</key>
+            <string>https://cert.khoindvn.io.vn</string>
+            
+            <key>FullScreen</key>
+            <true/>
+            
+            <key>IsRemovable</key>
+            <false/>
+            
+            <key>Label</key>
+            <string>Chứng Chỉ Mua (Khoindvn)</string>
+            
+            <key>Precomposed</key>
+            <false/>
+        </dict>
+    </array>
+</dict>
+</plist>
